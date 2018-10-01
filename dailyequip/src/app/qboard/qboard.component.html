@@ -1,54 +1,110 @@
-<div class="col col-12 bd-callout-info">
-    <div class="bd-callout">
-        <div class="row" (click)="switchState()">
-            <span id="mobile-view" class="responsive-mobile">
-                <div class="col-12" *ngIf="!switch">
-                    <h4 id="dealing-with-specificity">Dealing with specificity</h4>
-                    <p>Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element’s content in a <code class="highlighter-rouge">&lt;div&gt;</code> with the class.</p>
+<div class="row">
+    <div class="col">
+        <div class="alert  alert-primary" role="alert">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <strong>{{answers.Heading.text}}</strong>
                 </div>
-                <div class="col-12">
-                    <div class="myblock mx-auto" *ngIf="switch"></div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-2 col-4 add-border text-center">
+                            Score
+                        </div>
+                        <div class="col-md-2 responsive-non-mobile-scores">
+                            - 2
+                        </div>
+                        <div class="col-md-2 col-4 add-border text-center">
+                            Gold
+                        </div>
+                        <div class="col-md-2 responsive-non-mobile-scores">
+                            - 5
+                        </div>
+                        <div class="col-md-2 col-4  add-border text-center">
+                            Badge
+                        </div>
+                        <div class="col-md-2 responsive-non-mobile-scores">
+                            - 6
+                        </div>
+                    
+                        <div class="col-4 add-border responsive-mobile-scores text-center">
+                            - 1
+                        </div>
+                        <div class="col-4 add-border responsive-mobile-scores text-center">
+                            - 5
+                        </div>
+                        <div class="col-4 add-border responsive-mobile-scores text-center">
+                            - 7
+                        </div>
+                        
+                    </div>
                 </div>
-            </span>
-            <span id="non-mobile-view" class="responsive-non-mobile">
-                <div class="col-6">
-                    <h4 id="dealing-with-specificity">Dealing with specificity</h4>
-                    <p>Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element’s content in a <code class="highlighter-rouge">&lt;div&gt;</code> with the class.</p>
-                </div>
-                <div class="col-6">
-                    <div class="myblock mx-auto"></div>
-                </div>
-            </span>
+
+            </div>
         </div>
     </div>
 </div>
-<div class="col col-12 shadow-none p-3 mb-5 bg-light rounded">
-    <div class="row container p-2">
-        <div class="col-6">
-            <div class="row p-2">
-                <div class="col">
-                    <a class="btn btn-danger">Change To State 2</a>
+
+<div class="row justify-content-center align-items-center">
+
+
+    <div class="col-12 bd-callout-info">
+        <div class="bd-callout">
+            <div class="row centered-mobile-view" (click)="switchState()">
+                <span id="mobile-view" class="responsive-mobile">
+                <div class="col-12" style="height:201px" >
+                    <div *ngIf="!switch">
+                        <p>{{answers.Question.text}}</p>
+                    </div>
+                    <div class="myblock mx-auto" *ngIf="switch"></div>
                 </div>
-            </div>
-            <div class="row p-2">
-                <div class="col">
-                    <a class="btn btn-danger">Change To State 2</a>
+            </span>
+                <span id="non-mobile-view" class="responsive-non-mobile">
+                <div class="col-8">
+                    <p>{{answers.Question.text}}</p>
                 </div>
-            </div>
-            <div class="row p-2">
-                <div class="col">
-                    <a class="btn btn-danger">Change To State 2</a>
+                <div class="col-4">
+                    <div class="myblock mx-auto">
+
+                    </div>
                 </div>
-            </div>
-            <div class="row p-2">
-                <div class="col">
-                    <a class="btn btn-danger">Change To State 2</a>
-                </div>
+            </span>
             </div>
         </div>
-        <div class="col-6">
-            <div class="shadow-none p-3 mb-5 bg-dark text-white rounded">
-                jkhkjahsdfkjhasdlfjkhasdf
+    </div>
+
+
+    <div class="col-12 shadow-none p-3 mb-5 bg-light rounded">
+        <!-- <div [ngClass]=" {'col-sm-12':!selectedOption, 
+                        'col-lg-6' :!selectedOption, 
+                        'col-sm-12' : selectedOption, 
+                        'col-lg-6':selectedOption}"> -->
+        <div class="row p-2 ">
+            <div class="col-sm-12 col-md-6">
+                <div class="row p-2">
+                    <div class="col-12">
+                        <a class="btn btn-danger answerButton" (click)="selectedAnswer(1)">{{answers.Answers[0].optionText}}</a>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col col-12">
+                        <a class="btn btn-danger answerButton" (click)="selectedAnswer(2)">{{answers.Answers[1].optionText}}</a>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col col-12">
+                        <a class="btn btn-danger answerButton" (click)="selectedAnswer(3)">{{answers.Answers[2].optionText}}</a>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col">
+                        <a class="btn btn-danger answerButton" (click)="selectedAnswer(4)">{{answers.Answers[3].optionText}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="shadow-none answerButton p-3 mb-5 bg-dark text-white rounded overflowthingy" *ngIf="selectedOption">
+                    {{selectedOption.optionDescription}}
+                </div>
             </div>
         </div>
     </div>
