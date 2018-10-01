@@ -46,6 +46,15 @@
         display: block;
     }
 }
+.header-mobile-center {
+    @media (max-width: 576px){
+        text-align: center;
+        padding-bottom: 2px;
+    }
+    @media (min-width: 576px){
+        text-align: left;
+    }
+}
 
 .alert{
     margin-bottom: 0px !important;
@@ -76,7 +85,15 @@
     height: 100%;
 }
 
-
+.mobile-specs {
+    .p-2 {
+        padding: 0px !important;
+    }
+    .p-3 {
+        padding: 2px !important;
+    }
+    width: 100%;
+}
 
 .bd-callout {
     padding: 0.5rem;
@@ -88,4 +105,10 @@
     border-right-color: #eee;
     border-left-width: .25rem;
     border-radius: .25rem;
+    @media (max-width: 576px){
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+
 }
