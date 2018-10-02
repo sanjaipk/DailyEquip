@@ -1,0 +1,17 @@
+<div class="row p-2">
+    <div class="col-12">
+            <div *ngIf="style === 'globalStyle'">
+                <a [class]="quizService.globalStyle" (click)="selectedAnswer(answer.optionId)">{{answer.optionText}}
+                {{quizService.correctOptionAlreadySelected}}</a>
+            </div>
+            <div *ngIf="style === 'localStyle'">
+                <a [class]="buttonStyle" (click)="selectedAnswer(answer.optionId)">{{answer.optionText}}
+                {{quizService.correctOptionAlreadySelected}}</a>
+            </div>
+    </div>
+    <div class="col-12 d-block d-sm-block d-md-none">
+        <div class="shadow-none answerButton p-3 bg-dark text-white rounded overflowthingy" *ngIf="showDescription">
+            {{answer.optionDescription}}
+        </div>
+    </div>
+</div>

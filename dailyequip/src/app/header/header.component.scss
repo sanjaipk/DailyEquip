@@ -1,0 +1,14 @@
+
+.alert{
+    margin-bottom: 0px !important;
+}
+
+.header-mobile-center {
+    @media (max-width: 576px){
+        text-align: center;
+        padding-bottom: 2px;
+    }
+    @media (min-width: 576px){
+        text-align: left;
+    }
+}
