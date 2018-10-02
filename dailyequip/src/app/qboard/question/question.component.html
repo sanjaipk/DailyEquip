@@ -3,10 +3,10 @@
         <div class="row centered-mobile-view" (click)="switchState()">
             <span id="mobile-view" class="responsive-mobile">
             <div class="col-12" style="height:201px" >
-                <div *ngIf="!switch">
+                <div>
                     <p>{{question.text}}</p>
                 </div>
-                <div class="myblock mx-auto" *ngIf="switch"></div>
+                <div class="myblock mx-auto"></div>
             </div>
         </span>
             <span id="non-mobile-view" class="responsive-non-mobile">
