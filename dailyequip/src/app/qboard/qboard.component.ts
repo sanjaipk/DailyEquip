@@ -27,19 +27,17 @@ import { QuizService } from 'src/app/core/quiz.service';
 export class QboardComponent implements OnInit {
   bounce: any;
   @Input() currentState;
-  switch: boolean;
+
   selectedOption: string;
   isOptionSelected: boolean;
  
 
   constructor(private apiservice: QuizService) {
-    this.switch = false;
+ 
     this.isOptionSelected = false;
   }
 
-  switchState() {
-    this.switch = !this.switch;
-  }
+
 
   
 

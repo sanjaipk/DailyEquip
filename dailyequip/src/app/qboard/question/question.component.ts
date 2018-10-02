@@ -7,11 +7,18 @@ import { QuizService } from "src/app/core/quiz.service";
   styleUrls: ['./question.component.scss']
 })
 export class QuestionComponent implements OnInit {
-question: any
-  constructor(private apiservice: QuizService) { }
+question: any;
+switch: boolean;
+  constructor(private apiservice: QuizService) { 
+    this.switch = false;
+  }
 
   ngOnInit() {
     this.question = this.apiservice.apiresponses.Question;
+  }
+
+  switchState() {
+    this.switch = !this.switch;
   }
 
 }
