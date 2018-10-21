@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from "src/app/core/quiz.service";
+import { Input } from "@angular/core";
 
 @Component({
   selector: 'app-question',
@@ -9,12 +10,13 @@ import { QuizService } from "src/app/core/quiz.service";
 export class QuestionComponent implements OnInit {
 question: any;
 switch: boolean;
+@Input() Questions: any;
   constructor(private apiservice: QuizService) { 
     this.switch = false;
   }
 
   ngOnInit() {
-    this.question = this.apiservice.apiresponses.Question;
+
   }
 
   switchState() {

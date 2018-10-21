@@ -26,23 +26,19 @@ import { QuizService } from 'src/app/core/quiz.service';
 })
 export class QboardComponent implements OnInit {
   bounce: any;
-  @Input() currentState;
-
+  @Input() Questions: any;
+  @Input() Answers: any;
+  @Input() CorrectAnswer:any;
   selectedOption: string;
   isOptionSelected: boolean;
- 
 
   constructor(private apiservice: QuizService) {
- 
     this.isOptionSelected = false;
   }
 
-
-
-  
-
   ngOnInit() {
     // this.answers = this.apiservice.apiresponses;
+    console.log('from qboard', this.Answers, this.Questions);
   }
 
 }

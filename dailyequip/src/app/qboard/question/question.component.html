@@ -1,17 +1,17 @@
 <div class="col-12 bd-callout-info">
     <div class="bd-callout">
-        <div class="row centered-mobile-view" (click)="switchState()">
-            <span id="mobile-view" class="responsive-mobile">
+        <div class="row centered-mobile-view " (click)="switchState()">
+            <span id="mobile-view" class="responsive-mobile" style="width: 100%;">
             <div class="col-12" style="height:201px" >
                 <div *ngIf="!switch">
-                    <p>{{question.text}}</p>
+                    <p>{{Questions.text}}</p>
                 </div>
                 <div class="myblock mx-auto" *ngIf="switch"></div>
             </div>
         </span>
-            <span id="non-mobile-view" class="responsive-non-mobile">
+            <span id="non-mobile-view " class="responsive-non-mobile">
             <div class="col-8">
-                <p>{{question.text}}</p>
+                <p>{{Questions.text}}</p>
             </div>
             <div class="col-4">
                 <div class="myblock mx-auto">

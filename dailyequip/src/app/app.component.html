@@ -1,4 +1,4 @@
 <div class="container p-2">
- <app-header></app-header>
-    <app-qboard [currentState]="toState" style="width:100%"></app-qboard>
+      <app-header [headerObject]="hdrObj"></app-header>
+      <app-qboard [Questions]="QObj" [Answers]="AObj" [CorrectAnswer]="" style="width:100%"></app-qboard>
 </div>

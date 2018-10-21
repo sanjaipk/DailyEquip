@@ -10,6 +10,8 @@ import { ScoresComponent } from "src/app/header/scores/scores.component";
 import { QuestionComponent } from "src/app/qboard/question/question.component";
 import { AnswerComponent } from "src/app/qboard/answer-section/answer/answer.component";
 import { AnswerSectionComponent } from "src/app/qboard/answer-section/answer-section.component";
+import { HttpClient } from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 
 
 @NgModule({
@@ -25,9 +27,11 @@ import { AnswerSectionComponent } from "src/app/qboard/answer-section/answer-sec
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

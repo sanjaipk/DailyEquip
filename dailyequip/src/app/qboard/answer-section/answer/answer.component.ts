@@ -21,6 +21,7 @@ export class AnswerComponent implements OnInit {
     this.showDescription = false;
     this.buttonStyle = this.chooseButtonStyle();
     this.CalculateShowDescription();
+    
   }
 
   selectedAnswer(optionNumber) {
@@ -29,13 +30,15 @@ export class AnswerComponent implements OnInit {
     this.quizService.currentSelection = this.answer;
     this.buttonStyle = this.chooseButtonStyle();
     this.CalculateShowDescription();
-
+   
   }
 
   private chooseButtonStyle() {
-  
+    console.log(this.quizService.apiresponses.CorrectOption);
+   
     if (this.quizService.currentSelection) {
-      if (this.quizService.currentSelection.optionId === this.quizService.apiresponses.CorrectOption) {
+     
+      if (this.quizService.currentSelection.optionId === Number(this.quizService.apiresponses.CorrectOption)) {
         this.quizService.globalStyle = 'btn answerButton btn-info';
         this.style = 'localStyle';
         return 'btn answerButton btn-success';
