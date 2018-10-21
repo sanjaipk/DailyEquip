@@ -1,4 +1,6 @@
 <div class="container p-2">
       <app-header [headerObject]="hdrObj"></app-header>
       <app-qboard [Questions]="QObj" [Answers]="AObj" [CorrectAnswer]="" style="width:100%"></app-qboard>
+      <a class="btn btn-success" (click)="prev()">Previous</a> 
+      <a class="btn btn-warning" style="float:right" (click)="next()">Next</a> 
 </div>
