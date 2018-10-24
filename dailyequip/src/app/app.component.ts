@@ -37,6 +37,7 @@ export class AppComponent implements OnInit, OnChanges {
       this.currentIdx--;
       this.fetchapi(this.listOfIds[this.currentIdx].id);
     }
+    this.api.currentSelection = '';
   }
 
   next() {
@@ -45,6 +46,7 @@ export class AppComponent implements OnInit, OnChanges {
       this.currentIdx++;
       this.fetchapi(this.listOfIds[this.currentIdx].id);
     }
+    this.api.currentSelection = '';
   }
 
   ngOnInit() {

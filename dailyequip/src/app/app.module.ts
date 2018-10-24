@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { QboardComponent } from './qboard/qboard.component';
@@ -12,6 +13,7 @@ import { AnswerComponent } from "src/app/qboard/answer-section/answer/answer.com
 import { AnswerSectionComponent } from "src/app/qboard/answer-section/answer-section.component";
 import { HttpClient } from "@angular/common/http";
 import { HttpClientModule } from "@angular/common/http";
+import { QformComponent } from './qform/qform.component';
 
 
 @NgModule({
@@ -23,12 +25,14 @@ import { HttpClientModule } from "@angular/common/http";
     ScoresComponent,
     QuestionComponent,
     AnswerComponent,
-    AnswerSectionComponent
+    AnswerSectionComponent,
+    QformComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
   ],
