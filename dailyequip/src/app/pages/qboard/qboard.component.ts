@@ -43,18 +43,13 @@ export class QboardComponent implements OnInit, OnChanges {
   }
   ngOnChanges(changes: SimpleChanges) {
     // changes.prop contains the old and the new value...
-    console.log('changes qboard',changes);
-    for (let propName in changes) {
-      let chng = changes[propName];
-      let cur  = JSON.stringify(chng.currentValue);
-      let prev = JSON.stringify(chng.previousValue);
-      if(cur != prev) {
-        
-        if(propName == 'Answers') {
-          this.Answers = chng.currentValue;
-          console.log(`${propName}: currentValue = ${cur}, previousValue = ${prev}`);
+    console.log('changes qboard', changes);
+    for (const _propName in changes) {
+      if (JSON.stringify(changes[_propName].currentValue) !== JSON.stringify(changes[_propName].previousValue)) {
+        if (_propName === 'Answers') {
+          this.Answers = changes[_propName].currentValue;
+          console.log(`${_propName}: currentValue = ${JSON.stringify(changes[_propName].currentValue)}, previousValue = ${JSON.stringify(changes[_propName].previousValue)}`);
         }
-       
       }
     }
   }

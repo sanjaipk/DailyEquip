@@ -29,4 +29,4 @@ export class AnswerSectionComponent implements OnInit, OnChanges {
       }
     }
 }
-
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { QuizService } from "src/app/core/quiz.service";
-import { Input } from "@angular/core";
+import { QuizService } from 'src/app/core/quiz.service';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +9,11 @@ import { Input } from "@angular/core";
 })
 export class HeaderComponent implements OnInit {
   @Input() headerObject: any;
-  apiresponse: any
+  apiresponse: any;
   constructor(private apiservice: QuizService) { }
 
   ngOnInit() {
-    if(this.apiservice.apiresponses) {
+    if (this.apiservice.apiresponses) {
      this.apiresponse = this.apiservice.apiresponses.Heading;
     } else {
       this.apiresponse = '';
