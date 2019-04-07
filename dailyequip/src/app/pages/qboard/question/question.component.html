@@ -6,7 +6,7 @@
                 <div *ngIf="!switch">
                     <p>{{Questions.text}}</p>
                 </div>
-                <div class="myblock mx-auto" *ngIf="switch"></div>
+                <img class="myblock mx-auto" *ngIf="switch" [src]="Questions.image"/>
             </div>
         </span>
             <span id="non-mobile-view " class="responsive-non-mobile">
@@ -14,9 +14,7 @@
                 <p>{{Questions.text}}</p>
             </div>
             <div class="col-4">
-                <div class="myblock mx-auto">
-
-                </div>
+                <img class="myblock mx-auto" [src]="Questions.image"/>
             </div>
         </span>
         </div>
